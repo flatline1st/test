@@ -1,0 +1,342 @@
+123
+<html>
+<head>
+<link href=”/favicon.ico” rel=”icon” type=”image/x-icon” />
+<meta name="google-site-verification" content="P7_TO-HXzPqYPN-X7h2U9fnM38ppSOqKF6wl6EEimCg" />
+<script type="text/javascript" src="jscript/jquery/login/jqeasy.dropdown.min.js"></script>
+</head> 
+{config_load file="$language/lang_$language.conf" section="index"}
+ <body>
+ <div id="fb-root"></div>
+ <div id="container">
+ <div id="AllHeader">
+<!-- шапка --> 
+<div id="header">
+<div id="mainlogo"><a class="logoh" href="{$mainpage}"> </a> 
+</div>
+<div id="header_topleft">
+<!-- currency -->
+<div id="currmenu">
+<div id="currency"> </div>
+<div> <a class="kzt" href="index.php?currency=KZT" > </a></div>
+<div> <a class="rur"href="index.php?currency=RUR"> </a></div>
+<div> <a class="usd"href="index.php?currency=USD"> </a> </div>
+</div>
+<!-- /currency -->
+
+<!-- toplogon -->
+
+<div id="signbtn">
+
+{if $account}{if $smarty.session.customer_id}
+<div style="display:inline;float:right;">  <a class="btnsignout" href="{$logoff}">{#link_logoff#}</a>&nbsp;&nbsp; </div>
+<div style="display:inline;float:right;">  <a class="logoup_login" href="{$account}">{$last_name}</a>&nbsp;&nbsp; </div>
+<div style="display:inline;float:right;">  <a class="logoup_login" href="{$account}">{$first_name}</a>&nbsp;&nbsp; </div>
+{else}
+<div style="display:inline;float:right;"> &nbsp;&nbsp;</div>
+<div style="display:inline;float:right;"> <a class="logoup_login" href="create_account.php">Зарегистрируйтесь</a> </div>
+<div style="display:inline;float:right;"> <a href="login.php" class="btnsignin">Войдите</a>&nbsp;&nbsp;или&nbsp;&nbsp;</div>
+{/if}
+{/if}
+<div style="display:inline;float:right;"> Привет,&nbsp;&nbsp; </div>
+</div>
+
+<div id="frmsignin">
+<form id="login" action="login.php?action=process" method="post"> 
+    <p id="puser">
+    <label for="email_address">Ваш e-mail</label><br />
+    <input id="email_address" name="email_address" value="" title="Ваш e-mail" tabindex="1" type="text"> </input>
+    </p>
+    <p>
+<label for="password">Пароль</label><br />
+    <input id="password" name="password" value="" title="Пароль" tabindex="2" type="password" /> 
+    </p>
+    <p class="submit">
+ 
+    <input id="submitbtn" value="Войти" tabindex="3" type="submit" />
+    <span id ="remember" name="Забыли пароль" > <a  href="password_double_opt.php">Забыли пароль?</a> </span>
+    </p>
+	</form>
+   
+    <p id="msg"></p>
+</div>
+
+
+<!-- /toplogon -->
+
+</div>
+
+<!-- кнопки -->
+<div id="topbuttons"> 
+<div> <a class="razdel" href="index.php?cat=0&filter_id=1" > </a></div>
+<div> <a class="myacc"href="{$account}"> </a></div>
+<div> <a class="mycart"href="{$cart}"> </a> </div>
+<div> <a class="contacts"href="Kontakty.html"> </a> </div>
+</div>
+<!-- /кнопки -->  
+
+    <div id="rightmenu">
+    <noindex>
+<!--      <a class="f1" href="http://www.facebook.com/Leokidz.kz" target="_blank rel=nofollow "></a>
+        <a class="t1" href="https://twitter.com/#!/leokidzkz" target="_blank rel=nofollow"></a>
+        <a class="v1" href="http://vk.com/id81193104" target="_blank rel=nofollow"></a>  -->  
+    <noindex>
+
+</div>
+
+</div>
+ 
+
+<!-- /шапка -->
+
+
+ <div id="leftmenu">
+          <div> <a  class="a1"   href="shop_content.php?coID=4"></a> </div>
+		  <div> <a  class="a2"   href="shop_content.php?coID=1"></a>  </div>
+          <div> <a  class="a3"   href="shop_content.php?coID=3"></a> </div>
+    	  <div> <a  class="a4"   href="faq.php"></a> </div>
+          <div> <a  class="a5"   href="shop_content.php?coID=7"></a> </div>
+   </div>  
+ 
+
+<div id="mainflash">    
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="565" height="152" id="FlashID" title="leokidz">
+	  <param name="movie" value="{$tpl_path}img/winter.swf">
+	  <param name="quality" value="high">
+	  <param name="wmode" value="opaque">
+	  <param name="swfversion" value="9.0.45.0">
+	  <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+	  <param name="expressinstall" value="swfobject/expressInstall.swf">
+	  <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+	  <!--[if !IE]>-->
+	  <object type="application/x-shockwave-flash" data="{$tpl_path}img/winter.swf" width="565" height="152">
+	    <!--<![endif]-->
+	    <param name="quality" value="high">
+	    <param name="wmode" value="opaque">
+	    <param name="swfversion" value="9.0.45.0">
+	    <param name="expressinstall" value="swfobject/expressInstall.swf">
+	    <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+	    <div>
+	      <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+	      <p><a href="http://www.adobe.com/go/getflashplayer" rel="nofollow"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
+	      </div>
+	    <!--[if !IE]>-->
+	    </object>
+	  <!--<![endif]-->
+	  </object>
+      
+</div>
+</div>
+
+
+<div id="maincontent">
+<table align="center">
+<td><table width="935"  border="0" cellpadding="0" cellspacing="0" align="center">
+          <tr>
+            <td class="navLeft" valign="top" >
+                <div class="navLeft">
+					{$box_CATEGORIES}
+					<p> {$BANNER5}</p>
+                    <p>{$BANNER3}</p>
+                    <p>{$BANNER4}</p>
+					
+					<div id="Rsidebar"> <a href="shop_content.php?coID=1"> <img src="{$tpl_path}/img/delivery.png"> </a> </div>
+					{$box_FEATURED}
+					</div>
+                 
+            </td>
+            
+            <td valign="top">
+
+                        <div id="navigation">
+                            <span>{$navtrail}</span>
+                        </div>
+                <br /><br />
+                        <div class="main">
+                            {$main_content}
+                        </div>
+
+           
+			</td>
+			<div class="navRight" >
+			<td class="navRight" valign="top" >
+			<table width="178"  border="0" cellpadding="0" cellspacing="0" align="left" >
+              
+                
+					{$box_SEARCH}
+					{$box_CART}
+					{$box_ARTICLESNEW}					
+					{$box_ARTICLES}
+					
+                    <p> {$BANNER} </p>
+                    <p> {$BANNER1}</p>
+                    <p> {$BANNER2}</p>
+
+					
+					
+					
+            </table></td>
+			</div>
+           
+          </tr>
+          <tr>
+
+
+    </table>
+</td>
+</table>
+
+      
+<!-- Низ -->
+<div id="background"> <img src="{$tpl_path}/img/bg.jpg" alt=""> </div>
+<div id="footer">
+<!--{if $BANNER}
+<p>
+{$BANNER}
+</p>
+{/if}-->
+			<dl>
+				<dt>Инфо</dt>
+
+				<dd><a href="shop_content.php?coID=4">О магазине</a></dd>
+				<dd><a href="shop_content.php?coID=3">Соглашение</a></dd>
+				<dd><a href="shop_content.php?coID=1">Оплата\Доставка</a></dd>
+				<dd><a href="Kontakty.html">Контакты</a></dd>
+				</dl>
+			<dl>
+				<dt>Кабинет</dt>
+				<dd><a href="account.php">Мои данные</a></dd>
+				<dd><a href="shop_content.php?coID=7">Свяжитесь с нами</a></dd>
+				<dd><a href="faq.php">Вопросы\Ответы</a></dd>
+			</dl>
+			<dl>
+				<dt>Партнерам</dt>
+				<dd><a href="Optovym-pokupateljam2.html">Оптовикам</a></dd>
+				<dd><a href="#">Реклама</a></dd>
+			</dl>
+			<dl>
+				<dt>Ресурсы</dt>
+				<dd><a href="news.php">Новости</a></dd>
+				<dd><a href="articles.php">Статьи</a></dd>
+                <dd><a href="http://vk.com/club36195734" rel="nofollow" target="_blank">Вконтакте</a></dd>
+				<dd><a href="http://www.facebook.com/Leokidz.kz" rel="nofollow" target="_blank">Facebook</a></dd>
+                <dd><a href="http://twitter.com/#!/leokidzkz" rel="nofollow" target="_blank"> Twitter</a></dd>
+			</dl>
+      <div class="copyr">
+    		    <div >
+    			© 2010–2012 "Leokidz.kz"<br>
+    			<a href="http://www.leokidz.kz/">Leokidz.kz</a>
+    		  <br><br>
+  				E-mail:<br>
+  				<a href="mailto:info@leokidz.kz" title="Cлужба поддержки">info@leokidz.kz</a><br><br><br>
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t44.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='31' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+<!-- begin of Top100 code -->
+
+<script id="top100Counter" type="text/javascript" src="http://counter.rambler.ru/top100.jcn?2720293"></script>
+<noscript>
+<a href="http://top100.rambler.ru/navi/2720293/">
+<img src="http://counter.rambler.ru/top100.cnt?2720293" alt="Rambler's Top100" border="0" />
+</a>
+
+</noscript>
+<!-- end of Top100 code -->
+
+<!-- Yandex.Metrika counter -->
+
+<script type="text/javascript">
+    {literal}
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter14447029 = new Ya.Metrika({id:14447029, enableAll: true, webvisor:true});
+        } catch(e) {}
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+    {/literal}
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/14447029" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+			  </div>
+      </div>
+</div>
+<!-- /Низ -->
+ </div>
+
+<!--
+<table width="750" align="center" border="0" cellspacing="0" cellpadding="0">
+
+
+
+
+<a href="https://epay.kkb.kz"> <img src="{$tpl_path}img/epay1.jpg" > </a>
+&lt;!&ndash; begin WebMoney Transfer : accept label &ndash;&gt;
+<a href="http://www.megastock.ru/" target="_blank"><img src="http://www.megastock.ru/Doc/88x31_accept/blue_rus.gif" alt="www.megastock.ru" border="0"></a>
+&lt;!&ndash; end WebMoney Transfer : accept label &ndash;&gt;
+&lt;!&ndash; begin WebMoney Transfer : attestation label &ndash;&gt;
+<a href="https://passport.webmoney.ru/asp/certview.asp?wmid=490273644692" target="_blank"><img src="{$tpl_path}img/blue_rus.gif" alt="" border="0"><br><span style="font-size: 0,7em;"></span></a>
+&lt;!&ndash; end WebMoney Transfer : attestation label &ndash;&gt;
+
+</table>-->
+
+
+<script type="text/javascript">
+<!--
+swfobject.registerObject("FlashID");
+//-->
+</script>
+
+<script type="text/javascript" charset="utf-8">
+var proto = (document.location.protocol=='https:')?'https:':'http:';
+var host = proto+'//widget.copiny.com';
+document.write(unescape("%3Cscript src='" + host + "/static/js/widget.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" charset="utf-8">
+{literal}
+        var copinyWidgetOptions = {
+	position: 'left',
+        hostcommunity:'http://leokidz.copiny.com',
+        newwindow: '0',
+        type: 'question',
+	color: 	  '#ff8400',
+        border:   '#ffffff',
+	round:    '1',
+	title:	  "\u041e\u0441\u0442\u0430\u0432\u0438\u0442\u044c \u043e\u0442\u0437\u044b\u0432",
+        cache:   "2c0cfe615abe21cfae19f5ccb843a00c\/2c0cfe615abe21cfae19f5ccb843a00c\/ejOwVXUxULV0VXUxVLUwBJNGIBEnAzAJYVvAxIGkszZYyBVJqTmY7QTRAAA-",
+        community:1869
+};
+initCopinyWidget(copinyWidgetOptions);
+CopinyWidget.showTab();
+{/literal}
+</script>
+
+</div>
+ </div>
+</body>
+
+</html>
+
+
